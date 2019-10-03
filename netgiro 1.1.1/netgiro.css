@@ -1,0 +1,75 @@
+/* ====================================================================
+    Checakout page (cart/confirm)
+   ==================================================================== */
+#netgiro-form {
+	margin-top: 15px;
+}
+
+#netgiro-form input[type=submit] {
+	float: right;
+}
+
+#netgiro-branding-container {
+	font-size: 0.8em;
+}
+
+#netgiro-branding-container .netgiro-container {
+	padding: 10px;
+}
+
+#netgiro-branding-container .netgiro-title {
+	margin: 0;
+}
+
+#netgiro-branding-container .netgiro-message {
+	padding-left: 35px;
+}
+
+#netgiro-branding-container .netgiro-logo {
+	padding: 5px;
+	margin-top: -7px;
+}
+
+.netgiro-radiobutton {
+	float: left; 
+	vertical-align: middle; 
+	padding: 20px 0px 20px 20px;
+}
+
+
+/* ====================================================================
+    Payment receive page
+   ==================================================================== */
+
+.netgiro-small-box {
+	/*max-width: 455px;
+	margin: 0 auto;*/
+}
+
+.netgiro-box {
+	font-size: 13px;
+	line-height: 18px;
+	color: #333;
+	border: 1px solid #d1d2d4;
+	background-color: #f3f3f3;
+	padding: 20px;
+}
+
+#netgiro-response > .row {
+	margin: 10px;
+}
+
+#netgiro-response h3 {
+	margin: 0!important;
+}
+
+#netgiro-response .vmpayment_name {
+	display: none;
+}
+
+#netgiro-response .vmpayment_description {
+	display: block;
+	font-size: 12px;
+	margin: 5px 0 0 47px;
+}
+

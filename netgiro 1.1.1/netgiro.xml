@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="2.5" group="vmpayment" method="upgrade">
+    <name>VMPAYMENT_NETGIRO</name>
+    <creationDate>October 2013</creationDate>
+    <version>1.1.0</version>
+    <author>Program5</author>
+    <authorEmail>info@program5.hr</authorEmail>
+    <authorUrl>http://www.program5.hr/</authorUrl>
+    <copyright>Copyright( C) 2013 Program5 - All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <description>This plugin enables you to setup your Netgiro payment system</description>
+
+    <media destination="../images/stories/virtuemart/payment">
+        <filename>netgiro.png</filename>
+    </media>
+
+    <languages folder="languages">
+      <language tag="en-GB" client="administrator">en-GB.plg_vmpayment_netgiro.ini</language>
+      <language tag="en-GB" client="administrator">en-GB.plg_vmpayment_netgiro.sys.ini</language>
+    </languages>
+
+    <files>
+        <filename plugin="netgiro">netgiro.php</filename>
+        <filename>index.html</filename>
+        <filename>netgiro.css</filename>
+    </files>
+
+  <params addpath="/administrator/components/com_virtuemart/elements">
+    <param type="spacer" default="VMPAYMENT_NETGIRO_VM_PARAMETERS" />
+    <param type="spacer" default="" />¸¸
+    
+    <param name="payment_logos" type="vmfiles" label="VMPAYMENT_NETGIRO_LOGOS" description="VMPAYMENT_NETGIRO_LOGOS_DESC" directory="/images/stories/virtuemart/payment" default="netgiro.png" hide_default="1" hide_none="1" stripext="0" exclude="^_" />
+
+
+    <!-- Payment Options -->
+    <param type="spacer" default="" />
+    <param name="default_payment" type="radio" default="true" label="VMPAYMENT_NETGIRO_DEFAULT_PAYMENT">
+        <option value="false">COM_VIRTUEMART_NO</option>
+        <option value="true">COM_VIRTUEMART_YES</option>
+    </param>
+
+    <param name="partial_payment" type="radio" default="false" label="VMPAYMENT_NETGIRO_PARTIAL_PAYMENT">
+        <option value="false">COM_VIRTUEMART_NO</option>
+        <option value="true">COM_VIRTUEMART_YES</option>
+    </param>
+    
+    <param name="no_interest_payment" type="radio" default="false" label="VMPAYMENT_NETGIRO_PARTIAL_NO_INTEREST_PAYMENT">
+        <option value="false">COM_VIRTUEMART_NO</option>
+        <option value="true">COM_VIRTUEMART_YES</option>
+    </param>
+    
+    <param type="spacer" default="" />
+    <param type="spacer" default="" />
+    <!-- Netgiro Test Mode Settings -->
+    <param name="netgiro_testmode" type="radio" default="1" label="VMPAYMENT_NETGIRO_TESTMODE" description="VMPAYMENT_NETGIRO_TESTMODE_DESC">
+      <option value="0">COM_VIRTUEMART_NO</option>
+      <option value="1">COM_VIRTUEMART_YES</option>
+    </param>
+    
+    <!-- Netgiro Account Settings -->
+    <param type="spacer" default="" />
+    <param type="spacer" default="" />
+    <param type="spacer" default="VMPAYMENT_NETGIRO_ACCOUNT_SETTINGS" />
+    
+    <param type="spacer" default="" />
+    <param type="textarea" name="application_id" cols="40" rows="5" label="VMPAYMENT_NETGIRO_APPLICATION_ID" description="VMPAYMENT_NETGIRO_APPLICATION_ID_DESC" default="" />
+
+    <param type="spacer" default="" />
+    <param type="textarea" name="secret_key" cols="40" rows="5" label="VMPAYMENT_NETGIRO_SECRET_KEY" description="VMPAYMENT_NETGIRO_SECRET_KEY_DESC" default="" />
+
+    <param type="spacer" default="" />
+    <param type="text" name="max_installments" size="15" label="VMPAYMENT_NETGIRO_MAX_INSTALLMENTS" description="VMPAYMENT_NETGIRO_MAX_INSTALLMENTS_DESC" default="" />
+
+    <!-- Order statuses -->
+    <param type="spacer" default="" level="level1" />
+    <param type="spacer" default="" level="level1" />
+    <param type="spacer" default="VMPAYMENT_NETGIRO_STATUS_HEADER" level="level1" />
+    <param type="spacer" default="" level="level1" />
+     <param name="status_pending" type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_NETGIRO_STATUS_PENDING" description="VMPAYMENT_DATATRANS_STATUS_PENDING_DESC" />
+    <param name="status_success" type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_NETGIRO_STATUS_SUCCESS" description="VMPAYMENT_DATATRANS_STATUS_SUCCESS_DESC" />
+    <param name="status_canceled" type="vmorderstate" scope="com_virtuemart" default="X" label="VMPAYMENT_NETGIRO_STATUS_FAILED" description="VMPAYMENT_DATATRANS_STATUS_FAILED_DESC" />
+
+
+  </params>
+  <config />
+
+<!--<updateservers> -->
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <!-- <server type="extension" priority="1" name="VM Payment Datatrans">http://update.masterhomepage.ch/datatrans/plg_datatrans_update.xml</server>
+    </updateservers>  -->
+
+</extension>
